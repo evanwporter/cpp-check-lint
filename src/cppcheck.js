@@ -254,7 +254,7 @@ class cppcheck {
             fix.edit = new vscode.WorkspaceEdit();
             fix.edit.set(document.uri, edits);
             actions.push(fix);
-        }
+        }p
 
         for (const suppress_id of suppress_set) {
             const fix = new vscode.CodeAction(`cppcheck-suppress ${suppress_id}`, vscode.CodeActionKind.QuickFix);
@@ -362,7 +362,6 @@ class cppcheck {
         }
 
         if (this.base.working) {
-            vscode.window.showErrorMessage("please wait checking done !")
             return;
         }
         else {
